@@ -47,6 +47,8 @@ class BusSystem:
         print("\nBus Not Found")        
                     
     def show_buses(self):
-        for bus in self.buses:
-            print(f"\nBus Number : {bus.number}, Available Seats : {bus.available_seats()}, Total seats : {bus.total_seats}, Bus Route : {bus.route}\n")
-            
+        if len(self.buses) == 0:
+            print("No Buses available")
+        else:
+            for bus in self.buses:
+                print(f"\nBus Number : {bus.number}, Available Seats : {bus.available_seats()}, Total seats : {bus.total_seats}, Bus Route : {bus.route}\n")
